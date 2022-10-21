@@ -1,6 +1,6 @@
 import { QrReader } from "react-qr-reader";
 import { useLogin } from "../../context/LoginContext";
-import { preparateString } from "../../utils/PreparateString";
+import { preparateString } from "../../utils/preparateString";
 
 const QRScanner = () => {
 
