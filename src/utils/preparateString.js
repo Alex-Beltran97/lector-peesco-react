@@ -1,3 +1,3 @@
 export const preparateString = (value) =>{
-  console.log(value);
+  console.log(JSON.parse(value));
 };
