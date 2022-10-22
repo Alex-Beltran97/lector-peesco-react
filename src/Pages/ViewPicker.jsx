@@ -13,11 +13,16 @@ const ViewPicker = () => {
 
   return (<>
     <Typography variant="h5">View Picker</Typography>
-    <FormGroup onChange={}>
-      <FormControlLabel control={<Checkbox defaultChecked />} label="Recepción de crudos" />
-      <FormControlLabel control={<Checkbox />} label="Preparar Picking" />
-      <FormControlLabel control={<Checkbox />} label="Realizar Picking" />
-    </FormGroup>
+    <FormControl>
+      <FormLabel>Gender</FormLabel>
+      <RadioGroup
+        defaultValue="qrcode"
+        onChange={ onChange }
+      >
+        <FormControlLabel value="qrcode" control={ <Radio /> } label=" Scanner QR " />
+        <FormControlLabel value="form" control={ <Radio /> } label=" Formulario " />
+      </RadioGroup>
+    </FormControl>
   </>)
 };
 
