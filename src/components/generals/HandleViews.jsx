@@ -5,7 +5,7 @@ const HandleViews = ({ onChange, options }) => {
     <FormControl>
       <FormLabel>Gender</FormLabel>
       <RadioGroup
-        defaultValue="qrcode"
+        defaultValue={ options[0].value }
         onChange={ onChange }
       >
         { options.map(item=>(
