@@ -1,16 +1,12 @@
 import { Box, Typography } from "@mui/material";
 import { useState } from "react";
 import FormContainer from "../components/Login/FormLogin/FormContainer";
-import HandleViews from "../components/Login/HandleViews";
+import HandleViews from "../components/generals/HandleViews";
 import QRScanner from "../components/Login/QRScanner";
-
-const optionsRadio = [
-  { id:1 ,value:"qrcode", label:"Scanner QR" },
-  { id:2 ,value:"form", label:"Formulario" }
-];
+import { optionsLogin } from "../constants/constants";
 
 const Login = () => {
-  const [view, setView] = useState("qrcode");
+  const [view, setView] = useState(optionsLogin[0].value);
 
   const handleChange = (e) =>{
     setView(e.target.value);
@@ -21,7 +17,7 @@ const Login = () => {
     <Typography>Seleccione una opcion de inicio de sesion</Typography>
     <HandleViews 
       onChange={ handleChange }
-      options={ optionsRadio }
+      options={ optionsLogin }
     />
     <Box style={{ width:"32rem", height:"32rem" }}>
     { view === "qrcode" ?
