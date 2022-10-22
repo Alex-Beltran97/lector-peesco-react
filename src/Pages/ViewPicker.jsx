@@ -13,9 +13,10 @@ const ViewPicker = () => {
 
   return (<>
     <Typography variant="h5">View Picker</Typography>
-    <FormGroup>
-      <FormControlLabel control={<Checkbox defaultChecked />} label="Label" />
-      <FormControlLabel disabled control={<Checkbox />} label="Disabled" />
+    <FormGroup onChange={}>
+      <FormControlLabel control={<Checkbox defaultChecked />} label="Recepción de crudos" />
+      <FormControlLabel control={<Checkbox />} label="Preparar Picking" />
+      <FormControlLabel control={<Checkbox />} label="Realizar Picking" />
     </FormGroup>
   </>)
 };
