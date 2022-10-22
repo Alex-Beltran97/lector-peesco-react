@@ -11,8 +11,8 @@ const FormContainer = () => {
   return (<>
     <Formik
         initialValues={{
-          cedula:1033801048,
-          password:"Admin1234!"
+          cedula:0,
+          password:""
         }}
 
         onSubmit={(values)=>{
@@ -30,7 +30,7 @@ const FormContainer = () => {
               <InputFields 
                 type="password"
                 label="Password"
-                name='cedula'
+                name='password'
               />
               <Button variant="contained" type="submit">Send</Button>
             </Stack>
