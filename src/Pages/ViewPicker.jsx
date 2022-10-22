@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Checkbox, FormControlLabel, FormGroup, Typography } from "@mui/material";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { LOGGED } from "../constants/constants";
@@ -13,7 +13,10 @@ const ViewPicker = () => {
 
   return (<>
     <Typography variant="h5">View Picker</Typography>
-    
+    <FormGroup>
+      <FormControlLabel control={<Checkbox defaultChecked />} label="Label" />
+      <FormControlLabel disabled control={<Checkbox />} label="Disabled" />
+    </FormGroup>
   </>)
 };
 
