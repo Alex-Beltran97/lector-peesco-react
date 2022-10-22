@@ -8,8 +8,8 @@ const HandleViews = ({ onChange }) => {
         defaultValue="qrcode"
         onChange={ onChange }
       >
-        <FormControlLabel value="qrcode" control={ <Radio /> } label="Scanner QR " />
-        <FormControlLabel value="form" control={ <Radio /> } label="Formulario" />
+        <FormControlLabel value="qrcode" control={ <Radio /> } label=" Scanner QR " />
+        <FormControlLabel value="form" control={ <Radio /> } label=" Formulario " />
       </RadioGroup>
     </FormControl>
   </>)

@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useState } from "react";
 import FormContainer from "../components/Login/FormLogin/FormContainer";
 import HandleViews from "../components/Login/HandleViews";
@@ -12,13 +12,13 @@ const Login = () => {
   };
 
   return (<>
-    <h1>Login</h1>
-    <p>Seleccione una opcion de inicio de sesion</p>
+    <Typography variant="h4">Login</Typography>
+    <Typography>Seleccione una opcion de inicio de sesion</Typography>
     <HandleViews 
       onChange={ handleChange }
     />
     <Box style={{ width:"32rem", height:"32rem" }}>
-    { view==="qrcode"?
+    { view === "qrcode" ?
       <QRScanner />
       :
       <FormContainer />
