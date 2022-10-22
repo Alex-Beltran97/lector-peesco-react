@@ -11,8 +11,8 @@ const FormContainer = () => {
   return (<>
     <Formik
         initialValues={{
-          cedula:1033801048,
-          password:"Admin1234!"
+          cedula:0,
+          password:""
         }}
 
         onSubmit={(values)=>{
@@ -21,7 +21,7 @@ const FormContainer = () => {
       >
         { ()=>(
           <Form>
-            <Stack spacing={ 2 }>
+            <Stack spacing={ 2 } marginTop={ 8 } paddingBottom={ 4 } paddingX={ 2 }>
               <InputFields
                 type="number"
                 label="Cedula"
@@ -29,10 +29,10 @@ const FormContainer = () => {
               />
               <InputFields 
                 type="password"
-                label="Password"
-                name='cedula'
+                label="Contraseña"
+                name='password'
               />
-              <Button variant="contained" type="submit">Send</Button>
+              <Button variant="contained" type="submit" style={{ backgroundColor:"#34809f" }}>Iniciar Sesion</Button>
             </Stack>
           </Form>
         ) }
