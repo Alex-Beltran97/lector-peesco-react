@@ -1,3 +1,4 @@
+import { useMediaQuery } from "@mui/material";
 import { createContext, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { login } from "../action/login.action";
@@ -34,13 +35,24 @@ export const LoginProvider = ({ children }) =>{
   };
 
 
+  const lg = useMediaQuery('(min-width:960px)');
+  const md = useMediaQuery('(min-width:735px)');
+  const sm = useMediaQuery('(min-width:490px)');
+  const xs = useMediaQuery('(min-width:360px)');
+  const xxs = useMediaQuery('(min-width:280px)');
+
 
   return(<>
     <LoginContext.Provider value={{
       loginFn,
       error,
       open,
-      handleOpen
+      handleOpen,
+      lg,
+      md,
+      sm,
+      xs,
+      xxs
     }}>
       { children }
     </LoginContext.Provider>

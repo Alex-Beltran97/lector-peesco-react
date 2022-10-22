@@ -21,7 +21,7 @@ const FormContainer = () => {
       >
         { ()=>(
           <Form>
-            <Stack spacing={ 2 }>
+            <Stack spacing={ 2 } marginTop={ 8 } paddingBottom={ 4 } paddingX={ 2 }>
               <InputFields
                 type="number"
                 label="Cedula"
@@ -29,10 +29,10 @@ const FormContainer = () => {
               />
               <InputFields 
                 type="password"
-                label="Password"
+                label="Contraseña"
                 name='password'
               />
-              <Button variant="contained" type="submit">Send</Button>
+              <Button variant="contained" type="submit" style={{ backgroundColor:"#34809f" }}>Iniciar Sesion</Button>
             </Stack>
           </Form>
         ) }
