@@ -1,4 +1,4 @@
-import { Checkbox, FormControlLabel, FormGroup, Typography } from "@mui/material";
+import { FormControlLabel, FormLabel, RadioGroup, Typography } from "@mui/material";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { LOGGED } from "../constants/constants";
@@ -13,7 +13,7 @@ const ViewPicker = () => {
 
   return (<>
     <Typography variant="h5">View Picker</Typography>
-    <FormControl>
+    {/* <FormControl>
       <FormLabel>Gender</FormLabel>
       <RadioGroup
         defaultValue="qrcode"
@@ -22,7 +22,7 @@ const ViewPicker = () => {
         <FormControlLabel value="qrcode" control={ <Radio /> } label=" Scanner QR " />
         <FormControlLabel value="form" control={ <Radio /> } label=" Formulario " />
       </RadioGroup>
-    </FormControl>
+    </FormControl> */}
   </>)
 };
 

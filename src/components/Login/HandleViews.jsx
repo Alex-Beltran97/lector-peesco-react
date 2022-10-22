@@ -1,6 +1,6 @@
-import { FormControl, FormLabel, RadioGroup, Radio, FormControlLabel } from "@mui/material";
+import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from "@mui/material";
 
-const HandleViews = ({ onChange }) => {
+const HandleViews = ({ onChange, options }) => {
   return (<>
     <FormControl>
       <FormLabel>Gender</FormLabel>
@@ -8,8 +8,9 @@ const HandleViews = ({ onChange }) => {
         defaultValue="qrcode"
         onChange={ onChange }
       >
-        <FormControlLabel value="qrcode" control={ <Radio /> } label=" Scanner QR " />
-        <FormControlLabel value="form" control={ <Radio /> } label=" Formulario " />
+        { options.map(item=>(
+          <FormControlLabel key={ item.id } value={ item.value } control={ <Radio /> } label={ item.label } />
+        )) }
       </RadioGroup>
     </FormControl>
   </>)
